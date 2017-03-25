@@ -1,0 +1,18 @@
+package improbable.general;
+
+type PlayerJoined {
+    string guid = 1;
+}
+
+type PlayerJoinedResponse {
+    EntityId entity_id = 1;
+    bool successful = 2;
+}
+
+component SpawnComponent {
+    // Schema file ID, unique within the project
+    id = 999;
+
+    int32 id = 1;
+    command PlayerJoinedResponse player_joined(PlayerJoined);
+}

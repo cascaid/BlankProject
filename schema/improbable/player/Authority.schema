@@ -1,0 +1,10 @@
+package improbable.player;
+
+type Heartbeat {
+}
+
+component Authority {
+    id = 1003;
+
+    event Heartbeat heartbeat;
+}

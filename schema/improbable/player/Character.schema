@@ -1,0 +1,25 @@
+package improbable.player;
+
+type Move {	
+	bool horizontal = 1;
+	bool positive = 2;
+}
+type MovementRequest {
+	int32 x = 1;
+	int32 y = 2;
+}
+type MovementResponse {
+    bool allowed = 1;
+}
+
+component Character {
+    // Schema file ID, unique within the project
+    id = 1001;
+
+    string name = 1;
+    int32 x = 2;
+    int32 y = 3;
+
+    command MovementResponse move_to(MovementRequest);
+
+}
