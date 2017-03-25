@@ -26,6 +26,12 @@
       "command": "java",
       "arguments": ["-jar", "./JavaServer.jar", "${IMPROBABLE_RECEPTIONIST_IP}", "${IMPROBABLE_RECEPTIONIST_PORT}", "${IMPROBABLE_API_URL}", "${IMPROBABLE_WORKER_ID}", "${IMPROBABLE_LOG_FILE}"
       ]
+    },
+    "linux": {
+      "artifact_name": "JavaServer@Linux.zip",
+      "command": "java",
+      "arguments": ["-jar", "./JavaServer.jar", "${IMPROBABLE_RECEPTIONIST_IP}", "${IMPROBABLE_RECEPTIONIST_PORT}", "${IMPROBABLE_API_URL}", "${IMPROBABLE_WORKER_ID}", "${IMPROBABLE_LOG_FILE}"
+      ]
     }
   }
 }
