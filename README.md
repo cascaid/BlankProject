@@ -1,27 +1,20 @@
-# BlankProject
+# JavaWorker
 ---
 
 *Copyright Improbable 2016*
 
-- *GitHub Repository*: [github.com/spatialos/BlankProject](https://github.com/spatialos/BlankProject)
+- *GitHub Repository*: [github.com/cascaid/JavaWorker](https://github.com/cascaid/JavaWorker)
 
 ---
 
 ## Introduction
 
-This is a blank SpatialOS project that you can use to build your own SpatialOS application.
+This project showcases how to use a Java worker within a SpatialOS project.
 
 It contains:
 
-* A SpatialOS project descriptor.
-* Unity worker
-* Bare-bones Launch Configurations for automatically and manually launching workers.
-* Bare-bones Client and Physics Scenes with a `Bootstrap.cs` file.
-* An example deployment configuration, `deploy.json`.
-* `.gitignore` files for a SpatialOS project.
+* Player lifecycle: Spawn on join, Despawn on disconnect/quit.
+* No UnityWorker, all server side handled by java.
+* Programmer art!
 
-## Using the BlankProject
 
-[SpatialOS documentation](https://spatialos.improbable.io/docs/).
-
-To report bugs or to give feedback on this project, please contact SpatialOS Support.
