@@ -3,5 +3,5 @@
 .classpath
 .project
 spatialos_worker_packages.json
-pom.xml
+/pom.xml
 worker-sdk

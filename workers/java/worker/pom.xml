@@ -1,0 +1,51 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>gamedevbear</groupId>
+  <artifactId>sprites</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>sprites</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+    	<groupId>improbable.worker</groupId>
+    	<artifactId>worker-sdk</artifactId>
+    	<version>1.0.0</version>
+    </dependency>
+  </dependencies>
+  <parent>
+  	<groupId>improbable.worker</groupId>
+  	<artifactId>java-worker</artifactId>
+  	<version>1.0.0</version>
+  </parent>
+  
+  <build>
+  	<finalName>JavaServer</finalName>
+  	<plugins>
+	  	<plugin>
+  			<artifactId>maven-shade-plugin</artifactId>
+  			<groupId>org.apache.maven.plugins</groupId>
+  			<version>2.4.3</version>
+  			<configuration>
+  				<transformers>
+  					<transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+  						<mainClass>sprites.JavaWorker</mainClass>
+  					</transformer>
+  				</transformers>
+  			</configuration>
+	  	</plugin>
+	  	<plugin>
+	  		<artifactId>exec-maven-plugin</artifactId>
+	  		<groupId>org.codehaus.mojo</groupId>
+	  	</plugin>
+  	</plugins>
+  </build>
+</project>
