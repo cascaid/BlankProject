@@ -3,6 +3,8 @@ package sprites.characters;
 import java.util.HashMap;
 import java.util.List;
 
+import improbable.general.WorldTransform;
+import improbable.math.Coordinates;
 import improbable.general.SpawnComponent.Commands.PlayerJoined;
 import improbable.player.Character;
 import improbable.player.Character.Commands.MoveTo;
@@ -106,6 +108,9 @@ public class CharacterTracker {
 			update.setX(op.request.getX());
 			update.setY(op.request.getY());
 			connection.sendComponentUpdate(op.entityId, update);
+			WorldTransform.Update worldUpdate = new WorldTransform.Update();
+			worldUpdate.setPosition(new Coordinates(op.request.getX(), 0, op.request.getY()));
+			connection.sendComponentUpdate(op.entityId, worldUpdate);
 			MovementResponse response = new MovementResponse(true);
 			connection.sendCommandResponse(op.requestId, response);
 		}
