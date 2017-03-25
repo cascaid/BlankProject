@@ -1,0 +1,7 @@
+.settings
+.spatialos
+.classpath
+.project
+spatialos_worker_packages.json
+pom.xml
+worker-sdk
